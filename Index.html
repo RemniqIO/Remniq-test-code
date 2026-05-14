@@ -1,1 +1,1379 @@
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left;height:11pt}.c2{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c3{background-color:#ffffff;max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c3 doc-content"><p class="c2"><span class="c0">&lt;!DOCTYPE html&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;html lang=&quot;sv&quot;&gt;</span></p><p class="c2"><span class="c0">&lt;head&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;title&gt;Remniq &mdash; Kunskap som stannar&lt;/title&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;style&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">```</span></p><p class="c2"><span class="c0">:root {</span></p><p class="c2"><span class="c0">&nbsp; --black: #080808;</span></p><p class="c2"><span class="c0">&nbsp; --dark: #111111;</span></p><p class="c2"><span class="c0">&nbsp; --dark2: #1a1a1a;</span></p><p class="c2"><span class="c0">&nbsp; --white: #fafaf8;</span></p><p class="c2"><span class="c0">&nbsp; --cream: #f2efe8;</span></p><p class="c2"><span class="c0">&nbsp; --accent: #c8f04a;</span></p><p class="c2"><span class="c0">&nbsp; --accent2: #a8d832;</span></p><p class="c2"><span class="c0">&nbsp; --gray: #888880;</span></p><p class="c2"><span class="c0">&nbsp; --lightgray: #d4d0c8;</span></p><p class="c2"><span class="c0">&nbsp; --border-dark: rgba(255,255,255,0.08);</span></p><p class="c2"><span class="c0">&nbsp; --border-light: #dedad2;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">html { scroll-behavior: smooth; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">body {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--cream);</span></p><p class="c2"><span class="c0">&nbsp; color: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Instrument Sans&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 15px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.6;</span></p><p class="c2"><span class="c0">&nbsp; overflow-x: hidden;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; NAV &#9472;&#9472; */</span></p><p class="c2"><span class="c0">nav {</span></p><p class="c2"><span class="c0">&nbsp; position: fixed;</span></p><p class="c2"><span class="c0">&nbsp; top: 0; left: 0; right: 0;</span></p><p class="c2"><span class="c0">&nbsp; z-index: 100;</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; justify-content: space-between;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">&nbsp; padding: 0 48px;</span></p><p class="c2"><span class="c0">&nbsp; height: 64px;</span></p><p class="c2"><span class="c0">&nbsp; background: rgba(8,8,8,0.92);</span></p><p class="c2"><span class="c0">&nbsp; backdrop-filter: blur(12px);</span></p><p class="c2"><span class="c0">&nbsp; border-bottom: 1px solid var(--border-dark);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.nav-logo {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 20px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; text-decoration: none;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -0.3px;</span></p><p class="c2"><span class="c0">&nbsp; cursor: pointer;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.nav-logo .dot {</span></p><p class="c2"><span class="c0">&nbsp; color: var(--accent);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.nav-links {</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; gap: 36px;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.nav-links a {</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.55);</span></p><p class="c2"><span class="c0">&nbsp; text-decoration: none;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 400;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 0.3px;</span></p><p class="c2"><span class="c0">&nbsp; transition: color 0.2s;</span></p><p class="c2"><span class="c0">&nbsp; cursor: pointer;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.nav-links a:hover, .nav-links a.active {</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.nav-cta {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--accent) !important;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--black) !important;</span></p><p class="c2"><span class="c0">&nbsp; padding: 9px 20px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 600 !important;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 12px !important;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 0.5px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; PAGES &#9472;&#9472; */</span></p><p class="c2"><span class="c0">.page { display: none; }</span></p><p class="c2"><span class="c0">.page.active { display: block; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; HERO &#9472;&#9472; */</span></p><p class="c2"><span class="c0">.hero {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; min-height: 100vh;</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; flex-direction: column;</span></p><p class="c2"><span class="c0">&nbsp; justify-content: center;</span></p><p class="c2"><span class="c0">&nbsp; padding: 120px 48px 80px;</span></p><p class="c2"><span class="c0">&nbsp; position: relative;</span></p><p class="c2"><span class="c0">&nbsp; overflow: hidden;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.hero::before {</span></p><p class="c2"><span class="c0">&nbsp; content: &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; position: absolute;</span></p><p class="c2"><span class="c0">&nbsp; top: -200px; right: -200px;</span></p><p class="c2"><span class="c0">&nbsp; width: 700px; height: 700px;</span></p><p class="c2"><span class="c0">&nbsp; background: radial-gradient(circle, rgba(200,240,74,0.06) 0%, transparent 70%);</span></p><p class="c2"><span class="c0">&nbsp; pointer-events: none;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.hero::after {</span></p><p class="c2"><span class="c0">&nbsp; content: &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; position: absolute;</span></p><p class="c2"><span class="c0">&nbsp; bottom: -100px; left: -100px;</span></p><p class="c2"><span class="c0">&nbsp; width: 500px; height: 500px;</span></p><p class="c2"><span class="c0">&nbsp; background: radial-gradient(circle, rgba(200,240,74,0.04) 0%, transparent 70%);</span></p><p class="c2"><span class="c0">&nbsp; pointer-events: none;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.hero-eyebrow {</span></p><p class="c2"><span class="c0">&nbsp; display: inline-flex;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">&nbsp; gap: 8px;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 11px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 500;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 2px;</span></p><p class="c2"><span class="c0">&nbsp; text-transform: uppercase;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--accent);</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 32px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.hero-eyebrow span {</span></p><p class="c2"><span class="c0">&nbsp; width: 24px;</span></p><p class="c2"><span class="c0">&nbsp; height: 1px;</span></p><p class="c2"><span class="c0">&nbsp; background: var(--accent);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.hero h1 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; font-size: clamp(42px, 6vw, 80px);</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.0;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -2.5px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; max-width: 820px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 32px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.hero h1 .highlight {</span></p><p class="c2"><span class="c0">&nbsp; color: var(--accent);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.hero-sub {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 18px;</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.45);</span></p><p class="c2"><span class="c0">&nbsp; max-width: 480px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 52px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.hero-actions {</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; gap: 16px;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.btn-primary {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--accent);</span></p><p class="c2"><span class="c0">&nbsp; color: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; padding: 16px 32px;</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 0.5px;</span></p><p class="c2"><span class="c0">&nbsp; text-decoration: none;</span></p><p class="c2"><span class="c0">&nbsp; cursor: pointer;</span></p><p class="c2"><span class="c0">&nbsp; border: none;</span></p><p class="c2"><span class="c0">&nbsp; transition: background 0.2s, transform 0.15s;</span></p><p class="c2"><span class="c0">&nbsp; display: inline-block;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.btn-primary:hover {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--accent2);</span></p><p class="c2"><span class="c0">&nbsp; transform: translateY(-1px);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.btn-ghost {</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.5);</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 400;</span></p><p class="c2"><span class="c0">&nbsp; text-decoration: none;</span></p><p class="c2"><span class="c0">&nbsp; cursor: pointer;</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">&nbsp; gap: 8px;</span></p><p class="c2"><span class="c0">&nbsp; transition: color 0.2s;</span></p><p class="c2"><span class="c0">&nbsp; border: none;</span></p><p class="c2"><span class="c0">&nbsp; background: none;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.btn-ghost:hover { color: var(--white); }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.hero-stats {</span></p><p class="c2"><span class="c0">&nbsp; position: absolute;</span></p><p class="c2"><span class="c0">&nbsp; bottom: 56px;</span></p><p class="c2"><span class="c0">&nbsp; right: 48px;</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; gap: 48px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.stat {</span></p><p class="c2"><span class="c0">&nbsp; text-align: right;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.stat-num {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 28px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -1px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.stat-label {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 11px;</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.35);</span></p><p class="c2"><span class="c0">&nbsp; margin-top: 4px;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 0.5px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; SECTIONS &#9472;&#9472; */</span></p><p class="c2"><span class="c0">section {</span></p><p class="c2"><span class="c0">&nbsp; padding: 96px 48px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.section-tag {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 11px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 500;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 2.5px;</span></p><p class="c2"><span class="c0">&nbsp; text-transform: uppercase;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 20px;</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">&nbsp; gap: 10px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.section-tag::before {</span></p><p class="c2"><span class="c0">&nbsp; content: &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; width: 20px;</span></p><p class="c2"><span class="c0">&nbsp; height: 1px;</span></p><p class="c2"><span class="c0">&nbsp; background: var(--gray);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.section-title {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; font-size: clamp(28px, 3.5vw, 44px);</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -1.2px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.1;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 16px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.section-desc {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 16px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; max-width: 480px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.8;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; HOME PAGE SECTIONS &#9472;&#9472; */</span></p><p class="c2"><span class="c0">.intro-section {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--cream);</span></p><p class="c2"><span class="c0">&nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; grid-template-columns: 1fr 1fr;</span></p><p class="c2"><span class="c0">&nbsp; gap: 80px;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.intro-right {</span></p><p class="c2"><span class="c0">&nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; grid-template-columns: 1fr 1fr;</span></p><p class="c2"><span class="c0">&nbsp; gap: 2px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.intro-card {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; padding: 28px 24px;</span></p><p class="c2"><span class="c0">&nbsp; border: 1px solid var(--border-light);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.intro-card-icon {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 20px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 12px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.intro-card h4 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 14px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 8px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.intro-card p {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.6;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* Dark band */</span></p><p class="c2"><span class="c0">.dark-band {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--dark);</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; padding: 80px 48px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.dark-band .section-tag { color: var(--accent); }</span></p><p class="c2"><span class="c0">.dark-band .section-tag::before { background: var(--accent); }</span></p><p class="c2"><span class="c0">.dark-band .section-title { color: var(--white); }</span></p><p class="c2"><span class="c0">.dark-band .section-desc { color: rgba(255,255,255,0.45); }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.quote-block {</span></p><p class="c2"><span class="c0">&nbsp; margin-top: 48px;</span></p><p class="c2"><span class="c0">&nbsp; border-left: 3px solid var(--accent);</span></p><p class="c2"><span class="c0">&nbsp; padding-left: 32px;</span></p><p class="c2"><span class="c0">&nbsp; max-width: 600px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.quote-text {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 20px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 600;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.5;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 16px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.quote-attr {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.4);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* CTA band */</span></p><p class="c2"><span class="c0">.cta-band {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--accent);</span></p><p class="c2"><span class="c0">&nbsp; padding: 72px 48px;</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; justify-content: space-between;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.cta-band h2 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 32px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -1px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; max-width: 480px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.2;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.btn-dark {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; padding: 18px 36px;</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 0.5px;</span></p><p class="c2"><span class="c0">&nbsp; cursor: pointer;</span></p><p class="c2"><span class="c0">&nbsp; border: none;</span></p><p class="c2"><span class="c0">&nbsp; white-space: nowrap;</span></p><p class="c2"><span class="c0">&nbsp; transition: opacity 0.2s;</span></p><p class="c2"><span class="c0">&nbsp; flex-shrink: 0;</span></p><p class="c2"><span class="c0">&nbsp; margin-left: 48px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.btn-dark:hover { opacity: 0.85; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; PROBLEM PAGE &#9472;&#9472; */</span></p><p class="c2"><span class="c0">.problem-hero {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; padding: 140px 48px 80px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.problem-hero h1 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: clamp(36px, 5vw, 64px);</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -2px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.05;</span></p><p class="c2"><span class="c0">&nbsp; max-width: 700px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 24px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.problem-hero p {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 17px;</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.45);</span></p><p class="c2"><span class="c0">&nbsp; max-width: 480px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.problems-grid {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--cream);</span></p><p class="c2"><span class="c0">&nbsp; padding: 80px 48px;</span></p><p class="c2"><span class="c0">&nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; grid-template-columns: 1fr 1fr;</span></p><p class="c2"><span class="c0">&nbsp; gap: 2px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.prob-card {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; padding: 40px 36px;</span></p><p class="c2"><span class="c0">&nbsp; border: 1px solid var(--border-light);</span></p><p class="c2"><span class="c0">&nbsp; position: relative;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.prob-num {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 64px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--cream);</span></p><p class="c2"><span class="c0">&nbsp; position: absolute;</span></p><p class="c2"><span class="c0">&nbsp; top: 24px; right: 28px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1;</span></p><p class="c2"><span class="c0">&nbsp; user-select: none;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.prob-card h3 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 18px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -0.3px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 14px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.prob-card p {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 14px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">&nbsp; max-width: 340px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.prob-tag {</span></p><p class="c2"><span class="c0">&nbsp; display: inline-block;</span></p><p class="c2"><span class="c0">&nbsp; background: #fee2e2;</span></p><p class="c2"><span class="c0">&nbsp; color: #991b1b;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 10px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 600;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 1.5px;</span></p><p class="c2"><span class="c0">&nbsp; text-transform: uppercase;</span></p><p class="c2"><span class="c0">&nbsp; padding: 4px 10px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 16px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.cost-section {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--dark);</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; padding: 80px 48px;</span></p><p class="c2"><span class="c0">&nbsp; text-align: center;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.cost-section h2 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: clamp(28px, 4vw, 52px);</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -1.5px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.1;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 16px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.cost-section h2 span { color: var(--accent); }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.cost-section p {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 16px;</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.4);</span></p><p class="c2"><span class="c0">&nbsp; max-width: 440px;</span></p><p class="c2"><span class="c0">&nbsp; margin: 0 auto;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; SOLUTION PAGE &#9472;&#9472; */</span></p><p class="c2"><span class="c0">.solution-hero {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; padding: 140px 48px 80px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.solution-hero h1 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: clamp(36px, 5vw, 64px);</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -2px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.05;</span></p><p class="c2"><span class="c0">&nbsp; max-width: 700px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 24px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.solution-hero p {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 17px;</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.45);</span></p><p class="c2"><span class="c0">&nbsp; max-width: 500px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.steps-section {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--cream);</span></p><p class="c2"><span class="c0">&nbsp; padding: 80px 48px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.steps-row {</span></p><p class="c2"><span class="c0">&nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; grid-template-columns: repeat(3, 1fr);</span></p><p class="c2"><span class="c0">&nbsp; gap: 2px;</span></p><p class="c2"><span class="c0">&nbsp; margin-top: 48px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.step-card {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; padding: 40px 32px;</span></p><p class="c2"><span class="c0">&nbsp; border: 1px solid var(--border-light);</span></p><p class="c2"><span class="c0">&nbsp; position: relative;</span></p><p class="c2"><span class="c0">&nbsp; overflow: hidden;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.step-card::before {</span></p><p class="c2"><span class="c0">&nbsp; content: &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; position: absolute;</span></p><p class="c2"><span class="c0">&nbsp; top: 0; left: 0; right: 0;</span></p><p class="c2"><span class="c0">&nbsp; height: 3px;</span></p><p class="c2"><span class="c0">&nbsp; background: var(--accent);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.step-n {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 11px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 2px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--accent);</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 20px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.step-card h3 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 17px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -0.3px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 12px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.step-card p {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.results-section {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--dark);</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; padding: 80px 48px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.results-section .section-tag { color: var(--accent); }</span></p><p class="c2"><span class="c0">.results-section .section-tag::before { background: var(--accent); }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.results-grid {</span></p><p class="c2"><span class="c0">&nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; grid-template-columns: repeat(2, 1fr);</span></p><p class="c2"><span class="c0">&nbsp; gap: 2px;</span></p><p class="c2"><span class="c0">&nbsp; margin-top: 48px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.result-item {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--dark2);</span></p><p class="c2"><span class="c0">&nbsp; padding: 32px 28px;</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; gap: 16px;</span></p><p class="c2"><span class="c0">&nbsp; align-items: flex-start;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.result-icon {</span></p><p class="c2"><span class="c0">&nbsp; color: var(--accent);</span></p><p class="c2"><span class="c0">&nbsp; font-size: 18px;</span></p><p class="c2"><span class="c0">&nbsp; flex-shrink: 0;</span></p><p class="c2"><span class="c0">&nbsp; margin-top: 2px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.result-item h4 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 15px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 6px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.result-item p {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.4);</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.6;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; PRICING PAGE &#9472;&#9472; */</span></p><p class="c2"><span class="c0">.pricing-hero {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; padding: 140px 48px 80px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.pricing-hero h1 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: clamp(36px, 5vw, 64px);</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -2px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.05;</span></p><p class="c2"><span class="c0">&nbsp; max-width: 600px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 24px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.pricing-hero p {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 17px;</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.45);</span></p><p class="c2"><span class="c0">&nbsp; max-width: 460px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.pricing-section {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--cream);</span></p><p class="c2"><span class="c0">&nbsp; padding: 80px 48px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.pricing-card-main {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; border: 1.5px solid var(--black);</span></p><p class="c2"><span class="c0">&nbsp; padding: 56px 48px;</span></p><p class="c2"><span class="c0">&nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; grid-template-columns: 1fr auto;</span></p><p class="c2"><span class="c0">&nbsp; gap: 48px;</span></p><p class="c2"><span class="c0">&nbsp; align-items: start;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 2px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.pricing-card-main h3 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 24px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -0.5px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 16px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.pricing-card-main .desc {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 15px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">&nbsp; max-width: 440px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 28px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.includes-list {</span></p><p class="c2"><span class="c0">&nbsp; list-style: none;</span></p><p class="c2"><span class="c0">&nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; grid-template-columns: 1fr 1fr;</span></p><p class="c2"><span class="c0">&nbsp; gap: 10px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.includes-list li {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; gap: 8px;</span></p><p class="c2"><span class="c0">&nbsp; align-items: flex-start;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.includes-list li::before {</span></p><p class="c2"><span class="c0">&nbsp; content: &#39;&#10003;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--accent2);</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 12px;</span></p><p class="c2"><span class="c0">&nbsp; flex-shrink: 0;</span></p><p class="c2"><span class="c0">&nbsp; margin-top: 1px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.price-block {</span></p><p class="c2"><span class="c0">&nbsp; text-align: right;</span></p><p class="c2"><span class="c0">&nbsp; flex-shrink: 0;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.price-amount {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 44px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -2px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--black);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.price-period {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; margin-top: 6px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.price-note {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 11px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--lightgray);</span></p><p class="c2"><span class="c0">&nbsp; margin-top: 4px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.pricing-note {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; padding: 28px 36px;</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">&nbsp; gap: 16px;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 14px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.pricing-note span {</span></p><p class="c2"><span class="c0">&nbsp; color: var(--accent);</span></p><p class="c2"><span class="c0">&nbsp; font-size: 18px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.faq-section {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--cream);</span></p><p class="c2"><span class="c0">&nbsp; padding: 80px 48px;</span></p><p class="c2"><span class="c0">&nbsp; border-top: 1px solid var(--border-light);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.faq-item {</span></p><p class="c2"><span class="c0">&nbsp; border-bottom: 1px solid var(--border-light);</span></p><p class="c2"><span class="c0">&nbsp; padding: 24px 0;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.faq-q {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 16px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 10px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.faq-a {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 14px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">&nbsp; max-width: 600px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; CONTACT PAGE &#9472;&#9472; */</span></p><p class="c2"><span class="c0">.contact-hero {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; padding: 140px 48px 80px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-hero h1 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: clamp(36px, 5vw, 64px);</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -2px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.05;</span></p><p class="c2"><span class="c0">&nbsp; max-width: 600px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 24px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-hero p {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 17px;</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.45);</span></p><p class="c2"><span class="c0">&nbsp; max-width: 440px;</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-section {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--cream);</span></p><p class="c2"><span class="c0">&nbsp; padding: 80px 48px;</span></p><p class="c2"><span class="c0">&nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; grid-template-columns: 1fr 1fr;</span></p><p class="c2"><span class="c0">&nbsp; gap: 80px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-form {</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; flex-direction: column;</span></p><p class="c2"><span class="c0">&nbsp; gap: 16px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.form-group {</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; flex-direction: column;</span></p><p class="c2"><span class="c0">&nbsp; gap: 6px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.form-group label {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 11px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 600;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 1.5px;</span></p><p class="c2"><span class="c0">&nbsp; text-transform: uppercase;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.form-group input,</span></p><p class="c2"><span class="c0">.form-group textarea,</span></p><p class="c2"><span class="c0">.form-group select {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; border: 1.5px solid var(--border-light);</span></p><p class="c2"><span class="c0">&nbsp; padding: 14px 16px;</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Instrument Sans&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 14px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; outline: none;</span></p><p class="c2"><span class="c0">&nbsp; transition: border-color 0.2s;</span></p><p class="c2"><span class="c0">&nbsp; -webkit-appearance: none;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.form-group input:focus,</span></p><p class="c2"><span class="c0">.form-group textarea:focus,</span></p><p class="c2"><span class="c0">.form-group select:focus {</span></p><p class="c2"><span class="c0">&nbsp; border-color: var(--black);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.form-group textarea {</span></p><p class="c2"><span class="c0">&nbsp; min-height: 120px;</span></p><p class="c2"><span class="c0">&nbsp; resize: vertical;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.form-submit {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">&nbsp; border: none;</span></p><p class="c2"><span class="c0">&nbsp; padding: 18px 36px;</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 0.5px;</span></p><p class="c2"><span class="c0">&nbsp; cursor: pointer;</span></p><p class="c2"><span class="c0">&nbsp; transition: background 0.2s;</span></p><p class="c2"><span class="c0">&nbsp; align-self: flex-start;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.form-submit:hover { background: var(--dark2); }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-info {</span></p><p class="c2"><span class="c0">&nbsp; padding-top: 8px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-info h3 {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 20px;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: -0.3px;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 24px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-info p {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 14px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; line-height: 1.8;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 300;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 32px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-detail {</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; flex-direction: column;</span></p><p class="c2"><span class="c0">&nbsp; gap: 16px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-row {</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; gap: 12px;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-row-icon {</span></p><p class="c2"><span class="c0">&nbsp; width: 36px;</span></p><p class="c2"><span class="c0">&nbsp; height: 36px;</span></p><p class="c2"><span class="c0">&nbsp; background: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">&nbsp; justify-content: center;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 14px;</span></p><p class="c2"><span class="c0">&nbsp; flex-shrink: 0;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-row-text {</span></p><p class="c2"><span class="c0">&nbsp; font-size: 14px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--black);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.contact-row-text span {</span></p><p class="c2"><span class="c0">&nbsp; display: block;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 11px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--gray);</span></p><p class="c2"><span class="c0">&nbsp; letter-spacing: 1px;</span></p><p class="c2"><span class="c0">&nbsp; text-transform: uppercase;</span></p><p class="c2"><span class="c0">&nbsp; margin-bottom: 2px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; FOOTER &#9472;&#9472; */</span></p><p class="c2"><span class="c0">footer {</span></p><p class="c2"><span class="c0">&nbsp; background: var(--black);</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.35);</span></p><p class="c2"><span class="c0">&nbsp; padding: 40px 48px;</span></p><p class="c2"><span class="c0">&nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; justify-content: space-between;</span></p><p class="c2"><span class="c0">&nbsp; align-items: center;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 12px;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">footer .footer-logo {</span></p><p class="c2"><span class="c0">&nbsp; font-family: &#39;Syne&#39;, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; font-weight: 800;</span></p><p class="c2"><span class="c0">&nbsp; font-size: 16px;</span></p><p class="c2"><span class="c0">&nbsp; color: var(--white);</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">footer .footer-logo .dot { color: var(--accent); }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">footer a {</span></p><p class="c2"><span class="c0">&nbsp; color: rgba(255,255,255,0.35);</span></p><p class="c2"><span class="c0">&nbsp; text-decoration: none;</span></p><p class="c2"><span class="c0">&nbsp; transition: color 0.2s;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">footer a:hover { color: var(--white); }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* &#9472;&#9472; ANIMATIONS &#9472;&#9472; */</span></p><p class="c2"><span class="c0">@keyframes fadeUp {</span></p><p class="c2"><span class="c0">&nbsp; from { opacity: 0; transform: translateY(24px); }</span></p><p class="c2"><span class="c0">&nbsp; to { opacity: 1; transform: translateY(0); }</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.page.active .hero h1,</span></p><p class="c2"><span class="c0">.page.active .hero-sub,</span></p><p class="c2"><span class="c0">.page.active .hero-actions,</span></p><p class="c2"><span class="c0">.page.active .hero-eyebrow {</span></p><p class="c2"><span class="c0">&nbsp; animation: fadeUp 0.6s ease forwards;</span></p><p class="c2"><span class="c0">}</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">.page.active .hero-eyebrow { animation-delay: 0.1s; opacity: 0; }</span></p><p class="c2"><span class="c0">.page.active .hero h1 { animation-delay: 0.2s; opacity: 0; }</span></p><p class="c2"><span class="c0">.page.active .hero-sub { animation-delay: 0.35s; opacity: 0; }</span></p><p class="c2"><span class="c0">.page.active .hero-actions { animation-delay: 0.5s; opacity: 0; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">/* Mobile */</span></p><p class="c2"><span class="c0">@media (max-width: 768px) {</span></p><p class="c2"><span class="c0">&nbsp; nav { padding: 0 20px; }</span></p><p class="c2"><span class="c0">&nbsp; .nav-links { gap: 16px; }</span></p><p class="c2"><span class="c0">&nbsp; .nav-links a:not(.nav-cta) { display: none; }</span></p><p class="c2"><span class="c0">&nbsp; section, .hero, .problem-hero, .solution-hero, .pricing-hero, .contact-hero,</span></p><p class="c2"><span class="c0">&nbsp; .problems-grid, .steps-section, .results-section, .pricing-section,</span></p><p class="c2"><span class="c0">&nbsp; .faq-section, .contact-section, .dark-band, .cost-section, .cta-band, footer {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; padding-left: 20px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; padding-right: 20px;</span></p><p class="c2"><span class="c0">&nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; .hero h1 { font-size: 36px; }</span></p><p class="c2"><span class="c0">&nbsp; .hero-stats { display: none; }</span></p><p class="c2"><span class="c0">&nbsp; .intro-section, .contact-section { grid-template-columns: 1fr; gap: 40px; }</span></p><p class="c2"><span class="c0">&nbsp; .intro-right, .problems-grid, .steps-row, .results-grid, .includes-list { grid-template-columns: 1fr; }</span></p><p class="c2"><span class="c0">&nbsp; .pricing-card-main { grid-template-columns: 1fr; }</span></p><p class="c2"><span class="c0">&nbsp; .price-block { text-align: left; }</span></p><p class="c2"><span class="c0">&nbsp; .cta-band { flex-direction: column; gap: 24px; align-items: flex-start; }</span></p><p class="c2"><span class="c0">&nbsp; .btn-dark { margin-left: 0; }</span></p><p class="c2"><span class="c0">}</span></p><p class="c2"><span class="c0">```</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;/style&gt;</span></p><p class="c2"><span class="c0">&lt;/head&gt;</span></p><p class="c2"><span class="c0">&lt;body&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;!-- NAV --&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;nav&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;nav-logo&quot; onclick=&quot;showPage(&#39;home&#39;)&quot;&gt;Remniq&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;nav-links&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;a onclick=&quot;showPage(&#39;home&#39;)&quot; id=&quot;nav-home&quot; class=&quot;active&quot;&gt;Hem&lt;/a&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;a onclick=&quot;showPage(&#39;problem&#39;)&quot; id=&quot;nav-problem&quot;&gt;Problemet&lt;/a&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;a onclick=&quot;showPage(&#39;solution&#39;)&quot; id=&quot;nav-solution&quot;&gt;L&ouml;sningen&lt;/a&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;a onclick=&quot;showPage(&#39;pricing&#39;)&quot; id=&quot;nav-pricing&quot;&gt;Pris&lt;/a&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;a onclick=&quot;showPage(&#39;contact&#39;)&quot; id=&quot;nav-contact&quot; class=&quot;nav-cta&quot;&gt;Boka m&ouml;te&lt;/a&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/nav&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;!-- &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; HOME &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; --&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;page active&quot; id=&quot;page-home&quot;&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">```</span></p><p class="c2"><span class="c0">&lt;div class=&quot;hero&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;hero-eyebrow&quot;&gt;&lt;span&gt;&lt;/span&gt;AI-driven kunskapsbevarande&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h1&gt;Kunskap som&lt;br&gt;aldrig g&aring;r &lt;span class=&quot;highlight&quot;&gt;f&ouml;rlorad.&lt;/span&gt;&lt;/h1&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;p class=&quot;hero-sub&quot;&gt;Varje &aring;r f&ouml;rlorar bolag kritisk expertis n&auml;r medarbetare slutar. Remniq ser till att er organisations kunskap alltid stannar kvar.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;hero-actions&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;button class=&quot;btn-primary&quot; onclick=&quot;showPage(&#39;contact&#39;)&quot;&gt;Boka ett m&ouml;te&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;button class=&quot;btn-ghost&quot; onclick=&quot;showPage(&#39;problem&#39;)&quot;&gt;L&auml;s mer &rarr;&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;hero-stats&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;stat&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;stat-num&quot;&gt;42%&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;stat-label&quot;&gt;av kritisk kunskap&lt;br&gt;g&aring;r f&ouml;rlorad vid avhopp&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;stat&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;stat-num&quot;&gt;6 m&aring;n&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;stat-label&quot;&gt;genomsnittlig tid&lt;br&gt;f&ouml;r full produktivitet&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;section class=&quot;intro-section&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;intro-left&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;section-tag&quot;&gt;Vad vi g&ouml;r&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;h2 class=&quot;section-title&quot;&gt;Er AI.&lt;br&gt;Er kunskap.&lt;br&gt;Er organisation.&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;p class=&quot;section-desc&quot;&gt;Remniq bygger ett skr&auml;ddarsytt AI-system tr&auml;nat p&aring; er organisations egna processer, erfarenheter och dokumentation. Inte generisk AI &mdash; er AI.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;br&gt;&lt;br&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;button class=&quot;btn-primary&quot; onclick=&quot;showPage(&#39;solution&#39;)&quot; style=&quot;margin-top:8px&quot;&gt;Se hur det fungerar&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;intro-right&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;intro-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;intro-card-icon&quot;&gt;&#129504;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h4&gt;Kunskapsinsamling&lt;/h4&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p&gt;Vi dokumenterar er organisations samlade erfarenhet innan den f&ouml;rsvinner.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;intro-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;intro-card-icon&quot;&gt;&#9889;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h4&gt;AI-implementation&lt;/h4&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p&gt;Kunskapen struktureras i ett anpassat system tillg&auml;ngligt f&ouml;r hela teamet.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;intro-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;intro-card-icon&quot;&gt;&#128260;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h4&gt;L&ouml;pande uppdatering&lt;/h4&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p&gt;Systemet uppdateras m&aring;nadsvis och v&auml;xer med er organisation.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;intro-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;intro-card-icon&quot;&gt;&#128200;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h4&gt;M&auml;tbart resultat&lt;/h4&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p&gt;Kortare onboarding, f&auml;rre misstag, snabbare beslut.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&lt;/section&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;dark-band&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;section-tag&quot;&gt;Bakgrunden&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h2 class=&quot;section-title&quot; style=&quot;color:var(--white); max-width:560px&quot;&gt;Vi har sett problemet inifr&aring;n.&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;quote-block&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;quote-text&quot;&gt;&quot;Varje &aring;r s&aring;g jag samma sak &mdash; erfarna lag byttes ut, ny personal kom in och gjorde exakt samma misstag om igen. Ingen dokumenterade n&aring;got. Ingen tog ansvar. Kunskapen f&ouml;rsvann helt enkelt.&quot;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;quote-attr&quot;&gt;Grundare, Remniq &mdash; tidigare produktionsteam, Volvo Cars G&ouml;teborg&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;cta-band&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h2&gt;Redo att sluta f&ouml;rlora er mest v&auml;rdefulla tillg&aring;ng?&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;button class=&quot;btn-dark&quot; onclick=&quot;showPage(&#39;contact&#39;)&quot;&gt;Boka ett kostnadsfritt m&ouml;te&lt;/button&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;footer&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;footer-logo&quot;&gt;Remniq&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;span&gt;&copy; 2025 Remniq &mdash; remniq.io&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;a href=&quot;mailto:info@remniq.io&quot;&gt;info@remniq.io&lt;/a&gt;</span></p><p class="c2"><span class="c0">&lt;/footer&gt;</span></p><p class="c2"><span class="c0">```</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;!-- &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; PROBLEM &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; --&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;page&quot; id=&quot;page-problem&quot;&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">```</span></p><p class="c2"><span class="c0">&lt;div class=&quot;problem-hero&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;hero-eyebrow&quot; style=&quot;color:var(--accent); display:flex; align-items:center; gap:8px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:32px&quot;&gt;&lt;span style=&quot;width:24px;height:1px;background:var(--accent);display:inline-block&quot;&gt;&lt;/span&gt;Problemet&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h1&gt;Det kostar mer &auml;n&lt;br&gt;ni tror.&lt;/h1&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;p&gt;Kunskapsf&ouml;rlust &auml;r en av de mest underskattade kostnaderna i moderna bolag &mdash; och den drabbar er varje g&aring;ng n&aring;gon slutar.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;problems-grid&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;prob-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;prob-tag&quot;&gt;Kritiskt&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;prob-num&quot;&gt;01&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;h3&gt;Tyst kunskap f&ouml;rsvinner&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;p&gt;Det som aldrig skrivs ner &mdash; hur man hanterar en specifik kund, l&ouml;ser ett &aring;terkommande problem, navigerar en intern process &mdash; f&ouml;rsvinner permanent n&auml;r medarbetaren l&auml;mnar.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;prob-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;prob-tag&quot;&gt;Kostsamt&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;prob-num&quot;&gt;02&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;h3&gt;Misstag upprepas systematiskt&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;p&gt;Utan dokumenterad erfarenhet g&ouml;r varje ny generation medarbetare samma fel som f&ouml;reg&aring;ngarna. Inl&auml;rningskurvan b&ouml;rjar om fr&aring;n noll &mdash; varje g&aring;ng.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;prob-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;prob-tag&quot;&gt;Tidskr&auml;vande&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;prob-num&quot;&gt;03&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;h3&gt;Onboarding tar f&ouml;r l&aring;ng tid&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;p&gt;Ny personal tar 3-6 m&aring;nader att komma upp i full produktivitet. Under den perioden belastar de erfarna kollegor som tappar tid fr&aring;n sitt eget arbete.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;prob-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;prob-tag&quot;&gt;Ineffektivt&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;prob-num&quot;&gt;04&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;h3&gt;Generiska utbildningar fungerar inte&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;p&gt;Standardiserade kurser ignorerar er specifika kontext. Resultatet &auml;r utbildning som ingen applicerar &mdash; och pengar som kastas bort p&aring; insatser utan effekt.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;cost-section&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h2&gt;Varje avhopp kostar er&lt;br&gt;&lt;span&gt;upp till 200% av &aring;rsl&ouml;nen.&lt;/span&gt;&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;p&gt;Det inkluderar rekrytering, onboarding och f&ouml;rlorad produktivitet &mdash; men inte den kunskap som f&ouml;rsvann f&ouml;r alltid.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;br&gt;&lt;br&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;button class=&quot;btn-primary&quot; onclick=&quot;showPage(&#39;solution&#39;)&quot;&gt;Se hur Remniq l&ouml;ser det&lt;/button&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;footer&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;footer-logo&quot;&gt;Remniq&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;span&gt;&copy; 2025 Remniq &mdash; remniq.io&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;a href=&quot;mailto:info@remniq.io&quot;&gt;info@remniq.io&lt;/a&gt;</span></p><p class="c2"><span class="c0">&lt;/footer&gt;</span></p><p class="c2"><span class="c0">```</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;!-- &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; SOLUTION &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; --&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;page&quot; id=&quot;page-solution&quot;&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">```</span></p><p class="c2"><span class="c0">&lt;div class=&quot;solution-hero&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;hero-eyebrow&quot; style=&quot;color:var(--accent); display:flex; align-items:center; gap:8px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:32px&quot;&gt;&lt;span style=&quot;width:24px;height:1px;background:var(--accent);display:inline-block&quot;&gt;&lt;/span&gt;L&ouml;sningen&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h1&gt;Er AI.&lt;br&gt;Era svar.&lt;br&gt;Alltid tillg&auml;nglig.&lt;/h1&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;p&gt;Remniq bygger ett skr&auml;ddarsytt AI-system tr&auml;nat p&aring; er organisations unika kunskap &mdash; s&aring; att r&auml;tt svar alltid finns, oavsett vem som slutat.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;steps-section&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;section-tag&quot;&gt;Processen&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h2 class=&quot;section-title&quot;&gt;Tre steg till&lt;br&gt;bevarad kunskap.&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;steps-row&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;step-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;step-n&quot;&gt;STEG 01&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h3&gt;Vi samlar er kunskap&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p&gt;Genom strukturerade intervjuer och mallar f&aring;ngar vi kritisk kunskap fr&aring;n er erfarna personal &mdash; processer, beslut, erfarenheter och inl&auml;rda misstag &mdash; innan det &auml;r f&ouml;r sent.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;step-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;step-n&quot;&gt;STEG 02&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h3&gt;Vi bygger er AI&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p&gt;Kunskapen struktureras och implementeras i ett anpassat AI-system, tr&auml;nat specifikt p&aring; ert bolag. Inte en generisk l&ouml;sning &mdash; ett system som faktiskt f&ouml;rst&aring;r er verksamhet.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;step-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;step-n&quot;&gt;STEG 03&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h3&gt;Ni anv&auml;nder och v&auml;xer&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p&gt;Personal st&auml;ller fr&aring;gor och f&aring;r svar direkt &mdash; baserat p&aring; vad era b&auml;sta medarbetare faktiskt vet. Systemet uppdateras l&ouml;pande och blir smartare med tiden.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;results-section&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;section-tag&quot;&gt;Resultatet&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h2 class=&quot;section-title&quot; style=&quot;color:var(--white)&quot;&gt;Vad ni f&aring;r&lt;br&gt;fr&aring;n dag ett.&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;results-grid&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;result-item&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;result-icon&quot;&gt;&rarr;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4&gt;Kortare onboarding&lt;/h4&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Ny personal kommer upp i produktivitet p&aring; veckor ist&auml;llet f&ouml;r m&aring;nader.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;result-item&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;result-icon&quot;&gt;&rarr;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4&gt;F&auml;rre upprepade misstag&lt;/h4&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Inl&auml;rda fel dokumenteras och delas automatiskt med hela teamet.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;result-item&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;result-icon&quot;&gt;&rarr;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4&gt;Kunskap som stannar&lt;/h4&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;N&auml;r en medarbetare slutar stannar deras kunskap kvar i systemet &mdash; f&ouml;r alltid.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;result-item&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;result-icon&quot;&gt;&rarr;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4&gt;Frigjord tid f&ouml;r ledare&lt;/h4&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Chefer och seniora medarbetare slipper svara p&aring; samma fr&aring;gor om och om igen.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;result-item&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;result-icon&quot;&gt;&rarr;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4&gt;S&ouml;kbar intern kunskapsbas&lt;/h4&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;All er organisations kunskap &mdash; s&ouml;kbar och tillg&auml;nglig i realtid, dygnet runt.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;result-item&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;result-icon&quot;&gt;&rarr;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h4&gt;Kontinuerlig f&ouml;rb&auml;ttring&lt;/h4&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Systemet l&auml;r sig och uppdateras m&aring;nadsvis i takt med att er organisation v&auml;xer.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;cta-band&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h2&gt;Nyfiken p&aring; hur det skulle fungera f&ouml;r er?&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;button class=&quot;btn-dark&quot; onclick=&quot;showPage(&#39;contact&#39;)&quot;&gt;Boka ett kostnadsfritt m&ouml;te&lt;/button&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;footer&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;footer-logo&quot;&gt;Remniq&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;span&gt;&copy; 2025 Remniq &mdash; remniq.io&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;a href=&quot;mailto:info@remniq.io&quot;&gt;info@remniq.io&lt;/a&gt;</span></p><p class="c2"><span class="c0">&lt;/footer&gt;</span></p><p class="c2"><span class="c0">```</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;!-- &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; PRICING &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; --&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;page&quot; id=&quot;page-pricing&quot;&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">```</span></p><p class="c2"><span class="c0">&lt;div class=&quot;pricing-hero&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;hero-eyebrow&quot; style=&quot;color:var(--accent); display:flex; align-items:center; gap:8px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:32px&quot;&gt;&lt;span style=&quot;width:24px;height:1px;background:var(--accent);display:inline-block&quot;&gt;&lt;/span&gt;Pris&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h1&gt;Enkelt.&lt;br&gt;Transparent.&lt;br&gt;Inga &ouml;verraskningar.&lt;/h1&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;p&gt;Ett fast m&aring;nadsabonnemang som t&auml;cker allt &mdash; implementation, underh&aring;ll och l&ouml;pande support. Ingen bindningstid.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;pricing-section&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;section-tag&quot;&gt;Abonnemang&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;pricing-card-main&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h3&gt;Remniq &mdash; M&aring;nadsabonnemang&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p class=&quot;desc&quot;&gt;Allt ni beh&ouml;ver f&ouml;r att implementera och underh&aring;lla ett AI-drivet kunskapssystem i er organisation. Anpassat efter er storlek och era behov.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;ul class=&quot;includes-list&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Initial kunskapsinsamling&lt;/li&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Anpassad AI-implementation&lt;/li&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;L&ouml;pande m&aring;natlig uppdatering&lt;/li&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Obegr&auml;nsad support&lt;/li&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Onboarding f&ouml;r ert team&lt;/li&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;M&aring;nadsrapport och insikter&lt;/li&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;price-block&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;price-amount&quot;&gt;Fr&aring;n&lt;br&gt;15 000 kr&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;price-period&quot;&gt;per m&aring;nad, ex. moms&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;price-note&quot;&gt;Pris anpassas efter bolagets storlek&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;br&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-primary&quot; onclick=&quot;showPage(&#39;contact&#39;)&quot;&gt;Kom ig&aring;ng&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;pricing-note&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;span&gt;&#10022;&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;span&gt;Ingen bindningstid. Inga dolda kostnader. Vi erbjuder alltid ett kostnadsfritt 30-minutersm&ouml;te innan ni best&auml;mmer er.&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;faq-section&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;section-tag&quot;&gt;Vanliga fr&aring;gor&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h2 class=&quot;section-title&quot;&gt;FAQ&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;br&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;faq-item&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;faq-q&quot;&gt;Hur l&aring;ng tid tar implementationen?&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;faq-a&quot;&gt;Vanligtvis 2-4 veckor fr&aring;n signerat avtal till ett fungerande system. Det beror p&aring; hur mycket befintlig dokumentation ni har och hur tillg&auml;ngliga era nyckelmedarbetare &auml;r f&ouml;r intervjuer.&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;faq-item&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;faq-q&quot;&gt;Beh&ouml;ver vi teknisk personal internt?&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;faq-a&quot;&gt;Nej. Remniq hanterar all teknik. Ni beh&ouml;ver bara tillg&aring;ng till era medarbetare och er dokumentation &mdash; vi tar hand om resten.&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;faq-item&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;faq-q&quot;&gt;&Auml;r v&aring;r data s&auml;ker?&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;faq-a&quot;&gt;Ja. All er data behandlas konfidentiellt och lagras enligt g&auml;llande GDPR-regler. Er kunskap tillh&ouml;r er &mdash; alltid.&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;faq-item&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;faq-q&quot;&gt;Kan vi avsluta n&auml;r som helst?&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;faq-a&quot;&gt;Ja, ingen bindningstid. Vi tror p&aring; att h&aring;lla kunder genom kvalitet &mdash; inte kontrakt.&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;cta-band&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h2&gt;Fr&aring;gor om priss&auml;ttning? Vi ber&auml;ttar mer.&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;button class=&quot;btn-dark&quot; onclick=&quot;showPage(&#39;contact&#39;)&quot;&gt;Kontakta oss&lt;/button&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;footer&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;footer-logo&quot;&gt;Remniq&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;span&gt;&copy; 2025 Remniq &mdash; remniq.io&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;a href=&quot;mailto:info@remniq.io&quot;&gt;info@remniq.io&lt;/a&gt;</span></p><p class="c2"><span class="c0">&lt;/footer&gt;</span></p><p class="c2"><span class="c0">```</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;!-- &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; CONTACT &#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552; --&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;page&quot; id=&quot;page-contact&quot;&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">```</span></p><p class="c2"><span class="c0">&lt;div class=&quot;contact-hero&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;hero-eyebrow&quot; style=&quot;color:var(--accent); display:flex; align-items:center; gap:8px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:32px&quot;&gt;&lt;span style=&quot;width:24px;height:1px;background:var(--accent);display:inline-block&quot;&gt;&lt;/span&gt;Kontakt&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;h1&gt;L&aring;t oss ta&lt;br&gt;ett samtal.&lt;/h1&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;p&gt;30 minuter. Kostnadsfritt. Vi lyssnar p&aring; er situation och ber&auml;ttar om Remniq passar er &mdash; utan s&auml;ljsnack.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;div class=&quot;contact-section&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;contact-form&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;section-tag&quot;&gt;Skicka ett meddelande&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;label&gt;Namn&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; placeholder=&quot;Ditt namn&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;label&gt;E-post&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;input type=&quot;email&quot; placeholder=&quot;din@epost.se&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;label&gt;Bolag&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; placeholder=&quot;Bolagsnamn&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;label&gt;Meddelande&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;textarea placeholder=&quot;Ber&auml;tta kort om er situation...&quot;&gt;&lt;/textarea&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;button class=&quot;form-submit&quot; onclick=&quot;handleSubmit()&quot;&gt;Skicka meddelande&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;contact-info&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;section-tag&quot;&gt;Direktkontakt&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;h3&gt;Vi svarar inom&lt;br&gt;samma arbetsdag.&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;p&gt;F&ouml;redrar du att ringa direkt eller skicka ett mail? Vi &auml;r alltid tillg&auml;ngliga och svarar snabbt.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;contact-detail&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;contact-row&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;contact-row-icon&quot;&gt;&#9993;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;contact-row-text&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;E-post&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info@remniq.io</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;contact-row&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;contact-row-icon&quot;&gt;&#9678;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;contact-row-text&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Plats&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; G&ouml;teborg, Sverige</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;contact-row&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;contact-row-icon&quot;&gt;&rarr;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;contact-row-text&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Webb&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; remniq.io</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;footer&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div class=&quot;footer-logo&quot;&gt;Remniq&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;span&gt;&copy; 2025 Remniq &mdash; remniq.io&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;a href=&quot;mailto:info@remniq.io&quot;&gt;info@remniq.io&lt;/a&gt;</span></p><p class="c2"><span class="c0">&lt;/footer&gt;</span></p><p class="c2"><span class="c0">```</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;script&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function showPage(name) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; document.querySelectorAll(&#39;.page&#39;).forEach(p =&gt; p.classList.remove(&#39;active&#39;));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; document.querySelectorAll(&#39;.nav-links a&#39;).forEach(a =&gt; a.classList.remove(&#39;active&#39;));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;page-&#39; + name).classList.add(&#39;active&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const navEl = document.getElementById(&#39;nav-&#39; + name);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (navEl) navEl.classList.add(&#39;active&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; window.scrollTo({ top: 0, behavior: &#39;smooth&#39; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function handleSubmit() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const btn = document.querySelector(&#39;.form-submit&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; btn.textContent = &#39;Skickat! Vi h&ouml;r av oss snart.&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; btn.style.background = &#39;#2d5a00&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; btn.disabled = true;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &lt;/script&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;/body&gt;</span></p><p class="c2"><span class="c0">&lt;/html&gt;</span></p><p class="c1"><span class="c0"></span></p></body></html>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remniq — Kunskap som stannar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #080808;
+      --dark: #111111;
+      --dark2: #1a1a1a;
+      --white: #fafaf8;
+      --cream: #f2efe8;
+      --accent: #c8f04a;
+      --accent2: #a8d832;
+      --gray: #888880;
+      --lightgray: #d4d0c8;
+      --border-dark: rgba(255,255,255,0.08);
+      --border-light: #dedad2;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--black);
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 48px;
+      height: 64px;
+      background: rgba(8,8,8,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+      cursor: pointer;
+    }
+
+    .nav-logo .dot {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--white);
+    }
+
+    .nav-cta {
+      background: var(--accent) !important;
+      color: var(--black) !important;
+      padding: 9px 20px;
+      font-weight: 600 !important;
+      font-size: 12px !important;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── PAGES ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(200,240,74,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(200,240,74,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 32px;
+    }
+
+    .hero-eyebrow span {
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(42px, 6vw, 80px);
+      line-height: 1.0;
+      letter-spacing: -2.5px;
+      color: var(--white);
+      max-width: 820px;
+      margin-bottom: 32px;
+    }
+
+    .hero h1 .highlight {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.45);
+      max-width: 480px;
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 52px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--black);
+      padding: 16px 32px;
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent2);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+      font-weight: 400;
+      text-decoration: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+      border: none;
+      background: none;
+    }
+
+    .btn-ghost:hover { color: var(--white); }
+
+    .hero-stats {
+      position: absolute;
+      bottom: 56px;
+      right: 48px;
+      display: flex;
+      gap: 48px;
+    }
+
+    .stat {
+      text-align: right;
+    }
+
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 96px 48px;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-tag::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--gray);
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(28px, 3.5vw, 44px);
+      letter-spacing: -1.2px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      color: var(--gray);
+      max-width: 480px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* ── HOME PAGE SECTIONS ── */
+    .intro-section {
+      background: var(--cream);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .intro-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .intro-card {
+      background: var(--white);
+      padding: 28px 24px;
+      border: 1px solid var(--border-light);
+    }
+
+    .intro-card-icon {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .intro-card h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .intro-card p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* Dark band */
+    .dark-band {
+      background: var(--dark);
+      color: var(--white);
+      padding: 80px 48px;
+    }
+
+    .dark-band .section-tag { color: var(--accent); }
+    .dark-band .section-tag::before { background: var(--accent); }
+    .dark-band .section-title { color: var(--white); }
+    .dark-band .section-desc { color: rgba(255,255,255,0.45); }
+
+    .quote-block {
+      margin-top: 48px;
+      border-left: 3px solid var(--accent);
+      padding-left: 32px;
+      max-width: 600px;
+    }
+
+    .quote-text {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .quote-attr {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* CTA band */
+    .cta-band {
+      background: var(--accent);
+      padding: 72px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cta-band h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: var(--black);
+      max-width: 480px;
+      line-height: 1.2;
+    }
+
+    .btn-dark {
+      background: var(--black);
+      color: var(--white);
+      padding: 18px 36px;
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      border: none;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+      flex-shrink: 0;
+      margin-left: 48px;
+    }
+
+    .btn-dark:hover { opacity: 0.85; }
+
+    /* ── PROBLEM PAGE ── */
+    .problem-hero {
+      background: var(--black);
+      padding: 140px 48px 80px;
+      color: var(--white);
+    }
+
+    .problem-hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.05;
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+
+    .problem-hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.45);
+      max-width: 480px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .problems-grid {
+      background: var(--cream);
+      padding: 80px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .prob-card {
+      background: var(--white);
+      padding: 40px 36px;
+      border: 1px solid var(--border-light);
+      position: relative;
+    }
+
+    .prob-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 64px;
+      font-weight: 800;
+      color: var(--cream);
+      position: absolute;
+      top: 24px; right: 28px;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .prob-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 14px;
+    }
+
+    .prob-card p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 340px;
+    }
+
+    .prob-tag {
+      display: inline-block;
+      background: #fee2e2;
+      color: #991b1b;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      margin-bottom: 16px;
+    }
+
+    .cost-section {
+      background: var(--dark);
+      color: var(--white);
+      padding: 80px 48px;
+      text-align: center;
+    }
+
+    .cost-section h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .cost-section h2 span { color: var(--accent); }
+
+    .cost-section p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.4);
+      max-width: 440px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── SOLUTION PAGE ── */
+    .solution-hero {
+      background: var(--black);
+      padding: 140px 48px 80px;
+      color: var(--white);
+    }
+
+    .solution-hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.05;
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+
+    .solution-hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.45);
+      max-width: 500px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .steps-section {
+      background: var(--cream);
+      padding: 80px 48px;
+    }
+
+    .steps-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .step-card {
+      background: var(--white);
+      padding: 40px 32px;
+      border: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    .step-n {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .step-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+    }
+
+    .step-card p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .results-section {
+      background: var(--dark);
+      color: var(--white);
+      padding: 80px 48px;
+    }
+
+    .results-section .section-tag { color: var(--accent); }
+    .results-section .section-tag::before { background: var(--accent); }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .result-item {
+      background: var(--dark2);
+      padding: 32px 28px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .result-icon {
+      color: var(--accent);
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .result-item h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--white);
+    }
+
+    .result-item p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* ── PRICING PAGE ── */
+    .pricing-hero {
+      background: var(--black);
+      padding: 140px 48px 80px;
+      color: var(--white);
+    }
+
+    .pricing-hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.05;
+      max-width: 600px;
+      margin-bottom: 24px;
+    }
+
+    .pricing-hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.45);
+      max-width: 460px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .pricing-section {
+      background: var(--cream);
+      padding: 80px 48px;
+    }
+
+    .pricing-card-main {
+      background: var(--white);
+      border: 1.5px solid var(--black);
+      padding: 56px 48px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 2px;
+    }
+
+    .pricing-card-main h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .pricing-card-main .desc {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 440px;
+      margin-bottom: 28px;
+    }
+
+    .includes-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .includes-list li {
+      font-size: 13px;
+      color: var(--gray);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-weight: 300;
+    }
+
+    .includes-list li::before {
+      content: '✓';
+      color: var(--accent2);
+      font-weight: 700;
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .price-block {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .price-amount {
+      font-family: 'Syne', sans-serif;
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+      color: var(--black);
+    }
+
+    .price-period {
+      font-size: 13px;
+      color: var(--gray);
+      margin-top: 6px;
+    }
+
+    .price-note {
+      font-size: 11px;
+      color: var(--lightgray);
+      margin-top: 4px;
+    }
+
+    .pricing-note {
+      background: var(--black);
+      color: var(--white);
+      padding: 28px 36px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    .pricing-note span {
+      color: var(--accent);
+      font-size: 18px;
+    }
+
+    .faq-section {
+      background: var(--cream);
+      padding: 80px 48px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-light);
+      padding: 24px 0;
+    }
+
+    .faq-q {
+      font-family: 'Syne', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .faq-a {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 600px;
+    }
+
+    /* ── CONTACT PAGE ── */
+    .contact-hero {
+      background: var(--black);
+      padding: 140px 48px 80px;
+      color: var(--white);
+    }
+
+    .contact-hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.05;
+      max-width: 600px;
+      margin-bottom: 24px;
+    }
+
+    .contact-hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.45);
+      max-width: 440px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .contact-section {
+      background: var(--cream);
+      padding: 80px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: var(--white);
+      border: 1.5px solid var(--border-light);
+      padding: 14px 16px;
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 14px;
+      color: var(--black);
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--black);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      padding: 18px 36px;
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: background 0.2s;
+      align-self: flex-start;
+    }
+
+    .form-submit:hover { background: var(--dark2); }
+
+    .contact-info {
+      padding-top: 8px;
+    }
+
+    .contact-info h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 24px;
+    }
+
+    .contact-info p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 32px;
+    }
+
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .contact-row-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .contact-row-text {
+      font-size: 14px;
+      color: var(--black);
+    }
+
+    .contact-row-text span {
+      display: block;
+      font-size: 11px;
+      color: var(--gray);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.35);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    footer .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--white);
+    }
+
+    footer .footer-logo .dot { color: var(--accent); }
+
+    footer a {
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--white); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .page.active .hero h1,
+    .page.active .hero-sub,
+    .page.active .hero-actions,
+    .page.active .hero-eyebrow {
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .page.active .hero-eyebrow { animation-delay: 0.1s; opacity: 0; }
+    .page.active .hero h1 { animation-delay: 0.2s; opacity: 0; }
+    .page.active .hero-sub { animation-delay: 0.35s; opacity: 0; }
+    .page.active .hero-actions { animation-delay: 0.5s; opacity: 0; }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { gap: 16px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      section, .hero, .problem-hero, .solution-hero, .pricing-hero, .contact-hero,
+      .problems-grid, .steps-section, .results-section, .pricing-section,
+      .faq-section, .contact-section, .dark-band, .cost-section, .cta-band, footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .hero h1 { font-size: 36px; }
+      .hero-stats { display: none; }
+      .intro-section, .contact-section { grid-template-columns: 1fr; gap: 40px; }
+      .intro-right, .problems-grid, .steps-row, .results-grid, .includes-list { grid-template-columns: 1fr; }
+      .pricing-card-main { grid-template-columns: 1fr; }
+      .price-block { text-align: left; }
+      .cta-band { flex-direction: column; gap: 24px; align-items: flex-start; }
+      .btn-dark { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo" onclick="showPage('home')">Remniq<span class="dot">.</span></div>
+    <div class="nav-links">
+      <a onclick="showPage('home')" id="nav-home" class="active">Hem</a>
+      <a onclick="showPage('problem')" id="nav-problem">Problemet</a>
+      <a onclick="showPage('solution')" id="nav-solution">Lösningen</a>
+      <a onclick="showPage('pricing')" id="nav-pricing">Pris</a>
+      <a onclick="showPage('contact')" id="nav-contact" class="nav-cta">Boka möte</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════ HOME ════════════════════ -->
+  <div class="page active" id="page-home">
+
+    <div class="hero">
+      <div class="hero-eyebrow"><span></span>AI-driven kunskapsbevarande</div>
+      <h1>Kunskap som<br>aldrig går <span class="highlight">förlorad.</span></h1>
+      <p class="hero-sub">Varje år förlorar bolag kritisk expertis när medarbetare slutar. Remniq ser till att er organisations kunskap alltid stannar kvar.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="showPage('contact')">Boka ett möte</button>
+        <button class="btn-ghost" onclick="showPage('problem')">Läs mer →</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">42%</div>
+          <div class="stat-label">av kritisk kunskap<br>går förlorad vid avhopp</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">6 mån</div>
+          <div class="stat-label">genomsnittlig tid<br>för full produktivitet</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="intro-section">
+      <div class="intro-left">
+        <div class="section-tag">Vad vi gör</div>
+        <h2 class="section-title">Er AI.<br>Er kunskap.<br>Er organisation.</h2>
+        <p class="section-desc">Remniq bygger ett skräddarsytt AI-system tränat på er organisations egna processer, erfarenheter och dokumentation. Inte generisk AI — er AI.</p>
+        <br><br>
+        <button class="btn-primary" onclick="showPage('solution')" style="margin-top:8px">Se hur det fungerar</button>
+      </div>
+      <div class="intro-right">
+        <div class="intro-card">
+          <div class="intro-card-icon">🧠</div>
+          <h4>Kunskapsinsamling</h4>
+          <p>Vi dokumenterar er organisations samlade erfarenhet innan den försvinner.</p>
+        </div>
+        <div class="intro-card">
+          <div class="intro-card-icon">⚡</div>
+          <h4>AI-implementation</h4>
+          <p>Kunskapen struktureras i ett anpassat system tillgängligt för hela teamet.</p>
+        </div>
+        <div class="intro-card">
+          <div class="intro-card-icon">🔄</div>
+          <h4>Löpande uppdatering</h4>
+          <p>Systemet uppdateras månadsvis och växer med er organisation.</p>
+        </div>
+        <div class="intro-card">
+          <div class="intro-card-icon">📈</div>
+          <h4>Mätbart resultat</h4>
+          <p>Kortare onboarding, färre misstag, snabbare beslut.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="dark-band">
+      <div class="section-tag">Bakgrunden</div>
+      <h2 class="section-title" style="color:var(--white); max-width:560px">Vi har sett problemet inifrån.</h2>
+      <div class="quote-block">
+        <div class="quote-text">"Varje år såg jag samma sak — erfarna lag byttes ut, ny personal kom in och gjorde exakt samma misstag om igen. Ingen dokumenterade något. Ingen tog ansvar. Kunskapen försvann helt enkelt."</div>
+        <div class="quote-attr">Grundare, Remniq — tidigare produktionsteam, Volvo Cars Göteborg</div>
+      </div>
+    </div>
+
+    <div class="cta-band">
+      <h2>Redo att sluta förlora er mest värdefulla tillgång?</h2>
+      <button class="btn-dark" onclick="showPage('contact')">Boka ett kostnadsfritt möte</button>
+    </div>
+
+    <footer>
+      <div class="footer-logo">Remniq<span class="dot">.</span></div>
+      <span>© 2025 Remniq — remniq.io</span>
+      <a href="mailto:info@remniq.io">info@remniq.io</a>
+    </footer>
+  </div>
+
+  <!-- ════════════════════ PROBLEM ════════════════════ -->
+  <div class="page" id="page-problem">
+
+    <div class="problem-hero">
+      <div class="hero-eyebrow" style="color:var(--accent); display:flex; align-items:center; gap:8px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:32px"><span style="width:24px;height:1px;background:var(--accent);display:inline-block"></span>Problemet</div>
+      <h1>Det kostar mer än<br>ni tror.</h1>
+      <p>Kunskapsförlust är en av de mest underskattade kostnaderna i moderna bolag — och den drabbar er varje gång någon slutar.</p>
+    </div>
+
+    <div class="problems-grid">
+      <div class="prob-card">
+        <div class="prob-tag">Kritiskt</div>
+        <div class="prob-num">01</div>
+        <h3>Tyst kunskap försvinner</h3>
+        <p>Det som aldrig skrivs ner — hur man hanterar en specifik kund, löser ett återkommande problem, navigerar en intern process — försvinner permanent när medarbetaren lämnar.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-tag">Kostsamt</div>
+        <div class="prob-num">02</div>
+        <h3>Misstag upprepas systematiskt</h3>
+        <p>Utan dokumenterad erfarenhet gör varje ny generation medarbetare samma fel som föregångarna. Inlärningskurvan börjar om från noll — varje gång.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-tag">Tidskrävande</div>
+        <div class="prob-num">03</div>
+        <h3>Onboarding tar för lång tid</h3>
+        <p>Ny personal tar 3-6 månader att komma upp i full produktivitet. Under den perioden belastar de erfarna kollegor som tappar tid från sitt eget arbete.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-tag">Ineffektivt</div>
+        <div class="prob-num">04</div>
+        <h3>Generiska utbildningar fungerar inte</h3>
+        <p>Standardiserade kurser ignorerar er specifika kontext. Resultatet är utbildning som ingen applicerar — och pengar som kastas bort på insatser utan effekt.</p>
+      </div>
+    </div>
+
+    <div class="cost-section">
+      <h2>Varje avhopp kostar er<br><span>upp till 200% av årslönen.</span></h2>
+      <p>Det inkluderar rekrytering, onboarding och förlorad produktivitet — men inte den kunskap som försvann för alltid.</p>
+      <br><br>
+      <button class="btn-primary" onclick="showPage('solution')">Se hur Remniq löser det</button>
+    </div>
+
+    <footer>
+      <div class="footer-logo">Remniq<span class="dot">.</span></div>
+      <span>© 2025 Remniq — remniq.io</span>
+      <a href="mailto:info@remniq.io">info@remniq.io</a>
+    </footer>
+  </div>
+
+  <!-- ════════════════════ SOLUTION ════════════════════ -->
+  <div class="page" id="page-solution">
+
+    <div class="solution-hero">
+      <div class="hero-eyebrow" style="color:var(--accent); display:flex; align-items:center; gap:8px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:32px"><span style="width:24px;height:1px;background:var(--accent);display:inline-block"></span>Lösningen</div>
+      <h1>Er AI.<br>Era svar.<br>Alltid tillgänglig.</h1>
+      <p>Remniq bygger ett skräddarsytt AI-system tränat på er organisations unika kunskap — så att rätt svar alltid finns, oavsett vem som slutat.</p>
+    </div>
+
+    <div class="steps-section">
+      <div class="section-tag">Processen</div>
+      <h2 class="section-title">Tre steg till<br>bevarad kunskap.</h2>
+      <div class="steps-row">
+        <div class="step-card">
+          <div class="step-n">STEG 01</div>
+          <h3>Vi samlar er kunskap</h3>
+          <p>Genom strukturerade intervjuer och mallar fångar vi kritisk kunskap från er erfarna personal — processer, beslut, erfarenheter och inlärda misstag — innan det är för sent.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-n">STEG 02</div>
+          <h3>Vi bygger er AI</h3>
+          <p>Kunskapen struktureras och implementeras i ett anpassat AI-system, tränat specifikt på ert bolag. Inte en generisk lösning — ett system som faktiskt förstår er verksamhet.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-n">STEG 03</div>
+          <h3>Ni använder och växer</h3>
+          <p>Personal ställer frågor och får svar direkt — baserat på vad era bästa medarbetare faktiskt vet. Systemet uppdateras löpande och blir smartare med tiden.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-section">
+      <div class="section-tag">Resultatet</div>
+      <h2 class="section-title" style="color:var(--white)">Vad ni får<br>från dag ett.</h2>
+      <div class="results-grid">
+        <div class="result-item">
+          <div class="result-icon">→</div>
+          <div>
+            <h4>Kortare onboarding</h4>
+            <p>Ny personal kommer upp i produktivitet på veckor istället för månader.</p>
+          </div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">→</div>
+          <div>
+            <h4>Färre upprepade misstag</h4>
+            <p>Inlärda fel dokumenteras och delas automatiskt med hela teamet.</p>
+          </div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">→</div>
+          <div>
+            <h4>Kunskap som stannar</h4>
+            <p>När en medarbetare slutar stannar deras kunskap kvar i systemet — för alltid.</p>
+          </div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">→</div>
+          <div>
+            <h4>Frigjord tid för ledare</h4>
+            <p>Chefer och seniora medarbetare slipper svara på samma frågor om och om igen.</p>
+          </div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">→</div>
+          <div>
+            <h4>Sökbar intern kunskapsbas</h4>
+            <p>All er organisations kunskap — sökbar och tillgänglig i realtid, dygnet runt.</p>
+          </div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">→</div>
+          <div>
+            <h4>Kontinuerlig förbättring</h4>
+            <p>Systemet lär sig och uppdateras månadsvis i takt med att er organisation växer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-band">
+      <h2>Nyfiken på hur det skulle fungera för er?</h2>
+      <button class="btn-dark" onclick="showPage('contact')">Boka ett kostnadsfritt möte</button>
+    </div>
+
+    <footer>
+      <div class="footer-logo">Remniq<span class="dot">.</span></div>
+      <span>© 2025 Remniq — remniq.io</span>
+      <a href="mailto:info@remniq.io">info@remniq.io</a>
+    </footer>
+  </div>
+
+  <!-- ════════════════════ PRICING ════════════════════ -->
+  <div class="page" id="page-pricing">
+
+    <div class="pricing-hero">
+      <div class="hero-eyebrow" style="color:var(--accent); display:flex; align-items:center; gap:8px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:32px"><span style="width:24px;height:1px;background:var(--accent);display:inline-block"></span>Pris</div>
+      <h1>Enkelt.<br>Transparent.<br>Inga överraskningar.</h1>
+      <p>Ett fast månadsabonnemang som täcker allt — implementation, underhåll och löpande support. Ingen bindningstid.</p>
+    </div>
+
+    <div class="pricing-section">
+      <div class="section-tag">Abonnemang</div>
+      <div class="pricing-card-main">
+        <div>
+          <h3>Remniq — Månadsabonnemang</h3>
+          <p class="desc">Allt ni behöver för att implementera och underhålla ett AI-drivet kunskapssystem i er organisation. Anpassat efter er storlek och era behov.</p>
+          <ul class="includes-list">
+            <li>Initial kunskapsinsamling</li>
+            <li>Anpassad AI-implementation</li>
+            <li>Löpande månatlig uppdatering</li>
+            <li>Obegränsad support</li>
+            <li>Onboarding för ert team</li>
+            <li>Månadsrapport och insikter</li>
+          </ul>
+        </div>
+        <div class="price-block">
+          <div class="price-amount">Från<br>15 000 kr</div>
+          <div class="price-period">per månad, ex. moms</div>
+          <div class="price-note">Pris anpassas efter bolagets storlek</div>
+          <br>
+          <button class="btn-primary" onclick="showPage('contact')">Kom igång</button>
+        </div>
+      </div>
+      <div class="pricing-note">
+        <span>✦</span>
+        <span>Ingen bindningstid. Inga dolda kostnader. Vi erbjuder alltid ett kostnadsfritt 30-minutersmöte innan ni bestämmer er.</span>
+      </div>
+    </div>
+
+    <div class="faq-section">
+      <div class="section-tag">Vanliga frågor</div>
+      <h2 class="section-title">FAQ</h2>
+      <br>
+      <div class="faq-item">
+        <div class="faq-q">Hur lång tid tar implementationen?</div>
+        <div class="faq-a">Vanligtvis 2-4 veckor från signerat avtal till ett fungerande system. Det beror på hur mycket befintlig dokumentation ni har och hur tillgängliga era nyckelmedarbetare är för intervjuer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Behöver vi teknisk personal internt?</div>
+        <div class="faq-a">Nej. Remniq hanterar all teknik. Ni behöver bara tillgång till era medarbetare och er dokumentation — vi tar hand om resten.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Är vår data säker?</div>
+        <div class="faq-a">Ja. All er data behandlas konfidentiellt och lagras enligt gällande GDPR-regler. Er kunskap tillhör er — alltid.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Kan vi avsluta när som helst?</div>
+        <div class="faq-a">Ja, ingen bindningstid. Vi tror på att hålla kunder genom kvalitet — inte kontrakt.</div>
+      </div>
+    </div>
+
+    <div class="cta-band">
+      <h2>Frågor om prissättning? Vi berättar mer.</h2>
+      <button class="btn-dark" onclick="showPage('contact')">Kontakta oss</button>
+    </div>
+
+    <footer>
+      <div class="footer-logo">Remniq<span class="dot">.</span></div>
+      <span>© 2025 Remniq — remniq.io</span>
+      <a href="mailto:info@remniq.io">info@remniq.io</a>
+    </footer>
+  </div>
+
+  <!-- ════════════════════ CONTACT ════════════════════ -->
+  <div class="page" id="page-contact">
+
+    <div class="contact-hero">
+      <div class="hero-eyebrow" style="color:var(--accent); display:flex; align-items:center; gap:8px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:32px"><span style="width:24px;height:1px;background:var(--accent);display:inline-block"></span>Kontakt</div>
+      <h1>Låt oss ta<br>ett samtal.</h1>
+      <p>30 minuter. Kostnadsfritt. Vi lyssnar på er situation och berättar om Remniq passar er — utan säljsnack.</p>
+    </div>
+
+    <div class="contact-section">
+      <div class="contact-form">
+        <div class="section-tag">Skicka ett meddelande</div>
+        <div class="form-group">
+          <label>Namn</label>
+          <input type="text" placeholder="Ditt namn">
+        </div>
+        <div class="form-group">
+          <label>E-post</label>
+          <input type="email" placeholder="din@epost.se">
+        </div>
+        <div class="form-group">
+          <label>Bolag</label>
+          <input type="text" placeholder="Bolagsnamn">
+        </div>
+        <div class="form-group">
+          <label>Meddelande</label>
+          <textarea placeholder="Berätta kort om er situation..."></textarea>
+        </div>
+        <button class="form-submit" onclick="handleSubmit()">Skicka meddelande</button>
+      </div>
+
+      <div class="contact-info">
+        <div class="section-tag">Direktkontakt</div>
+        <h3>Vi svarar inom<br>samma arbetsdag.</h3>
+        <p>Föredrar du att ringa direkt eller skicka ett mail? Vi är alltid tillgängliga och svarar snabbt.</p>
+        <div class="contact-detail">
+          <div class="contact-row">
+            <div class="contact-row-icon">✉</div>
+            <div class="contact-row-text">
+              <span>E-post</span>
+              info@remniq.io
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">◎</div>
+            <div class="contact-row-text">
+              <span>Plats</span>
+              Göteborg, Sverige
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">→</div>
+            <div class="contact-row-text">
+              <span>Webb</span>
+              remniq.io
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-logo">Remniq<span class="dot">.</span></div>
+      <span>© 2025 Remniq — remniq.io</span>
+      <a href="mailto:info@remniq.io">info@remniq.io</a>
+    </footer>
+  </div>
+
+  <script>
+    function showPage(name) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      document.getElementById('page-' + name).classList.add('active');
+      const navEl = document.getElementById('nav-' + name);
+      if (navEl) navEl.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function handleSubmit() {
+      const btn = document.querySelector('.form-submit');
+      btn.textContent = 'Skickat! Vi hör av oss snart.';
+      btn.style.background = '#2d5a00';
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>
